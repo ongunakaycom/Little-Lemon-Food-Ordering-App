@@ -1,107 +1,107 @@
 # 🍋 Little Lemon – iOS Food Ordering App
 
-**Little Lemon** is an elegant Swift-based iOS app designed for a fictional Mediterranean restaurant. This project demonstrates UI building with **SwiftUI**, data persistence with **CoreData**, MVVM architecture, and a refined UI/UX based on provided wireframes and style guides.
+**Little Lemon** is an elegant Swift-based iOS application for a fictional Mediterranean restaurant. It showcases **SwiftUI**, **CoreData** for persistence, and follows the **MVVM** architectural pattern while adhering to a clean and consistent UI/UX based on provided wireframes and style guides.
 
 ---
 
-## 🧱 Stack Overview
+## 🧱 Tech Stack
 
-| Layer         | Technology                  |
-|--------------|------------------------------|
-| Language      | Swift                        |
-| UI Framework  | SwiftUI                     |
-| State Mgmt    | MVVM Architecture            |
-| Persistence   | CoreData                     |
-| IDE           | Xcode                        |
-| Assets        | Provided by Little Lemon design system |
-| Platform      | iOS                          |
+| Layer        | Technology                             |
+| ------------ | -------------------------------------- |
+| Language     | Swift                                  |
+| UI Framework | SwiftUI                                |
+| Architecture | MVVM                                   |
+| Persistence  | CoreData                               |
+| IDE          | Xcode                                  |
+| Assets       | Provided by Little Lemon design system |
+| Platform     | iOS                                    |
 
 ---
 
-## 🎨 UX & Design
+## 🎨 Design & UX
 
-The app's interface is designed to match the provided style guides and wireframes:
+The app is built to match the provided **wireframes** and **style guides**:
 
-- **Style Guides**: `PG_LittleLemon_StyleGuide.pdf`, `my-style-guide.pdf`
-- **Wireframes**: `my-wireframe.pdf`, `Canvas_Wireframe.fig`, `Canvas_Wireframe_Final.fig`
+* **Style Guides**: `PG_LittleLemon_StyleGuide.pdf`, `my-style-guide.pdf`
+* **Wireframes**: `my-wireframe.pdf`, `Canvas_Wireframe.fig`, `Canvas_Wireframe_Final.fig`
 
-Visual assets like food items, logos, and placeholders are stored in the `Little Lemon App Assets/` and embedded into `Assets.xcassets`.
+Assets like food images, logos, and placeholders are stored in the `Little Lemon App Assets/` folder and integrated into `Assets.xcassets`.
 
 ---
 
 ## 🔐 Architecture
 
-The app follows the **MVVM (Model-View-ViewModel)** pattern:
+The app follows **MVVM (Model-View-ViewModel)**:
 
-- **Models**: Represent menu items and lists.
-- **ViewModels**: Handle business logic and CoreData operations.
-- **Views**: SwiftUI screens like `Home`, `Menu`, `Hero`, `UserProfile`, and `Onboarding`.
+* **Models** – Represent menu items and lists.
+* **ViewModels** – Handle business logic and CoreData operations.
+* **Views** – SwiftUI screens such as `Home`, `Menu`, `DetailItem`, `Hero`, `UserProfile`, and `Onboarding`.
 
 ---
 
 ## 🧪 Features
 
-✅ Onboarding screen with persistent user profile  
-✅ Home and Menu screens with local image assets  
-✅ Detail item views  
-✅ CoreData integration for persistent state  
-✅ Profile page with image placeholder and static info  
-✅ Style consistency per brand guidelines
+✅ Onboarding screen with persistent user profile
+✅ Home and Menu screens with local image assets
+✅ Detail item views
+✅ CoreData integration for persistent state
+✅ Profile page with image placeholder and static info
+✅ Style consistency with brand guidelines
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Structure
 
 ```
 LittleLemonApp/
 ├── LittleLemonApp/
-│   ├── Assets.xcassets/         # App icons, images
-│   ├── CoreData/                # Persistence and data models
-│   ├── Models/                  # MenuItem and MenuList
-│   ├── ViewModels/              # ViewModel logic
-│   ├── Views/                   # SwiftUI components
-│   └── LittleLemonApp.swift     # App entry point
-└── LittleLemonApp.xcodeproj/    # Xcode project
+│   ├── Assets.xcassets/          # App icons, images
+│   ├── CoreData/                 # Persistence and data models
+│   ├── Models/                   # MenuItem and MenuList
+│   ├── ViewModels/               # Business logic and CoreData operations
+│   ├── Views/                    # SwiftUI screens and components
+│   └── LittleLemonApp.swift      # App entry point
+└── LittleLemonApp.xcodeproj/     # Xcode project
 ```
 
 ---
 
-## 🧰 Local Development Setup
+## 🖥 Local Setup
 
-### 🖥 Requirements
+### Requirements
 
-- Xcode 14+  
-- macOS Monterey or newer  
-- Swift 5.7+
+* Xcode 14+
+* macOS Monterey or newer
+* Swift 5.7+
 
-### 🚀 Run the App
+### Run the App
 
 ```bash
-# Open project
+# Open project in Xcode
 open LittleLemonApp.xcodeproj
 ```
 
-- Use an **iOS Simulator** or real device.
-- The app builds and runs with no additional setup.
+* Use an **iOS Simulator** or real device.
+* The app builds and runs without additional setup.
 
 ---
 
 ## 📦 CoreData
 
-- Uses `ExampleDatabase.xcdatamodeld` to persist menu selections and user info.
-- `Persistence.swift` handles setup and context management.
-- `FetchedObjects.swift` provides wrapper logic for reactive views.
+* Uses `ExampleDatabase.xcdatamodeld` for menu selections and user info.
+* `Persistence.swift` sets up the CoreData stack.
+* `FetchedObjects.swift` provides reactive data wrappers for SwiftUI.
 
 ---
 
-## 🧪 Linting & Testing
+## 🧪 Testing & Linting
 
-Manual testing via Xcode interface.
-
-> ℹ️ Note: Automated UI/unit tests can be added using XCTest framework.
+* Manual testing via Xcode interface.
+* Automated tests can be added with **XCTest**.
 
 ---
 
+<<<<<<< Updated upstream
 ## About Me
 
 I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various technologies.
@@ -110,6 +110,16 @@ I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various tech
 - 🌱 Currently, I'm sharpening my skills in advanced concepts of web development.
 - 💞️ I’m always open to exciting collaborations and projects that challenge my abilities.
 - 📫 You can reach me at [info@ongunakay.com](mailto:info@ongunakay.com).
+=======
+## 📬 About Me
+
+I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various technologies.
+
+* 👀 Specializes in full-stack development across frontend and backend technologies.
+* 🌱 Actively exploring advanced web development concepts.
+* 💞️ Open to collaborations and challenging projects.
+* 📫 Reach me at: [info@ongunakay.com](mailto:info@ongunakay.com)
+>>>>>>> Stashed changes
 
 ---
 
