@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CryptoKit
 
 struct UserProfile: View {
     @StateObject private var viewModel = ViewModel()
@@ -23,6 +24,31 @@ struct UserProfile: View {
     @State private var phoneNumber = ""
     
     @State private var isLoggedOut = false
+    
+    // --- Begin encryption utility ---
+
+    private let encryptionKey: SymmetricKey = {
+        // In production, store and retrieve this key securely from Keychain or device's secure enclave.
+        if let keyData = UserDefaults.standard.data(forKey: "encryptionKey"),
+            keyData.count == 32 {
+            return SymmetricKey(data: keyData)
+        } else {
+            let newKey = SymmetricKey(size: .bits256)
+            UserDefaults.standard.set(newKey.withUnsafeBytes { Data($0) }, forKey: "encryptionKey")
+            return newKey
+        }
+    }()
+
+    private func encrypt(_ text: String) -> String? {
+        do {
+            let sealedBox = try AES.GCM.seal(Data(text.utf8), using: encryptionKey)
+            return sealedBox.combined?.base64EncodedString()
+        } catch {
+            print("Encryption failed: \(error)")
+            return nil
+        }
+    }
+    // --- End encryption utility ---
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -122,7 +148,12 @@ struct UserProfile: View {
                     if viewModel.validateUserInput(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber) {
                         UserDefaults.standard.set(firstName, forKey: kFirstName)
                         UserDefaults.standard.set(lastName, forKey: kLastName)
-                        UserDefaults.standard.set(email, forKey: kEmail)
+                        if let encryptedEmail = encrypt(email) {
+                            UserDefaults.standard.set(encryptedEmail, forKey: kEmail)
+                        } else {
+                            // Fallback: don't persist email if encryption failed
+                            print("Failed to encrypt email, not saved.")
+                        }
                         UserDefaults.standard.set(phoneNumber, forKey: kPhoneNumber)
                         UserDefaults.standard.set(orderStatuses, forKey: kOrderStatuses)
                         UserDefaults.standard.set(passwordChanges, forKey: kPasswordChanges)
