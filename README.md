@@ -101,7 +101,6 @@ open LittleLemonApp.xcodeproj
 
 ---
 
-<<<<<<< Updated upstream
 ## About Me
 
 I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various technologies.
@@ -110,16 +109,6 @@ I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various tech
 - 🌱 Currently, I'm sharpening my skills in advanced concepts of web development.
 - 💞️ I’m always open to exciting collaborations and projects that challenge my abilities.
 - 📫 You can reach me at [info@ongunakay.com](mailto:info@ongunakay.com).
-=======
-## 📬 About Me
-
-I'm Ongun Akay, a Senior Full-Stack Developer with expertise across various technologies.
-
-* 👀 Specializes in full-stack development across frontend and backend technologies.
-* 🌱 Actively exploring advanced web development concepts.
-* 💞️ Open to collaborations and challenging projects.
-* 📫 Reach me at: [info@ongunakay.com](mailto:info@ongunakay.com)
->>>>>>> Stashed changes
 
 ---
 
