@@ -18,7 +18,7 @@
 
 ---
 
-## 🎨 Design & UX
+## 🎨 Design
 
 The app is built to match the provided **wireframes** and **style guides**:
 
