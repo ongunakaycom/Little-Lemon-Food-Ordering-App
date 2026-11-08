@@ -12,15 +12,6 @@
 
 🌐 **[View the Portfolio Page](https://ongunakaycom.github.io/Little-Lemon-Food-Ordering-App/)**
 
----
-
-<!-- Screenshots section can be enabled once actual images are added to docs/assets/ -->
-## 📸 Screenshots
-
-*(Coming soon)*
-
----
-
 ## 🛠 Technologies Used
 
 | Layer | Technology |
