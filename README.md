@@ -14,6 +14,7 @@
 ![MVVM](https://img.shields.io/badge/MVVM-architecture-success?logo=react&logoColor=white)
 ![CoreData](https://img.shields.io/badge/CoreData-persistent-green?logo=database&logoColor=white)
 ![Combine](https://img.shields.io/badge/Combine-reactive-purple?logo=swift&logoColor=white)
+![Meta](https://img.shields.io/badge/Meta-iOS%20Developer%20Certificate-1a73e8?logo=meta&logoColor=white)
 
 **Little Lemon** is an elegant SwiftUI iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate program on Coursera. The app demonstrates modern iOS development practices including **SwiftUI**, **CoreData** for persistent storage, **MVVM** architecture, and **Combine** for reactive state management.
 
