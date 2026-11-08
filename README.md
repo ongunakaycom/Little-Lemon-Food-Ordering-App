@@ -17,7 +17,7 @@
 
 ## 📸 Screenshots
 
-*(Aşağıdaki resimleri kendi ekran görüntülerinizle değiştirin)*
+*(Lütfen buradaki resim yollarını kendi ekran görüntülerinizle değiştirin. Resimlerinizi `assets/` klasörüne koymayı unutmayın.)*
 
 | Onboarding | Home | Menu | Profile |
 | :---: | :---: | :---: | :---: |
@@ -75,54 +75,57 @@ LittleLemonApp/
 └── LittleLemonApp.xcodeproj/
 ```
 
-🚀 **Local Setup**
+---
 
-**Requirements**
+## 🚀 Local Setup
+
+### Requirements
 - Xcode 14+ (or newer)
 - macOS Monterey (12+) or newer
 - Swift 5.7+
 
-**Run the App**
+### Run the App
+
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App.git
 
-# Open project in Xcode
+# 2. Open project in Xcode
 open LittleLemonApp.xcodeproj
-
-# Select an iOS simulator (e.g., iPhone 15) or connect a physical device.
-
-# Press Cmd+R or click the "Play" button in Xcode to build and run.
-
-# The app launches on the Onboarding Screen – enter user details and tap Register to proceed to Home.
 ```
 
-🗺 **Roadmap**
+3. Select an iOS simulator (e.g., iPhone 15) or connect a physical device.
+4. Press **Cmd+R** or click the "Play" button in Xcode to build and run.
+5. The app launches on the **Onboarding Screen** – enter user details and tap **Register** to proceed to Home.
+
+---
+
+## 🗺 Roadmap
+
 - [ ] Add XCTest unit tests for `ViewModel.validateUserInput()`
 - [ ] Handle network errors gracefully in `MenuList.getMenuData()`
 - [ ] Add dark mode support for all color assets
 - [ ] Add search debounce (0.5s) for better performance
 - [ ] Improve accessibility labels across all interactive elements
-- [ ] Add iPad split-view support for MainScreen and DetailItem
-
-👤 **Author**
-Ongun Akay – Mobile Developer passionate about building clean, maintainable iOS applications.
-
-- GitHub: [@ongunakaycom](https://github.com/ongunakaycom)
-- Project: [Little-Lemon-Food-Ordering-App](https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App)
-- Portfolio: ongunakaycom.github.io
-
-📧 **Email**: info@ongunakay.com
-
-📄 **License**
-This project is licensed under the MIT License – see the LICENSE file for details.
-
-Built with ❤️ during the Meta iOS Developer Professional Certificate program on Coursera.
+- [ ] Add iPad split-view support for `MainScreen` and `DetailItem`
 
 ---
 
-### 💡 Son Tavsiyeler
-1. **Dosyaları Temizleyin:** Reponuzun ana dizininde duran `Canvas_Wireframe.fig`, `my-wireframe.pdf`, `PG_LittleLemon_StyleGuide.pdf` gibi tasarım dosyalarını kök dizinden alıp `docs/design/` veya `assets/design/` gibi bir klasörün içine taşıyın. Kök dizin sadece kod ve yapılandırma dosyaları için temiz kalsın.
-2. **Ekran Görüntüleri:** Yukarıdaki README'de yer alan `assets/...` kısımlarını gerçekten var olan resimlerle değiştirin. Eğer resimler yoksa o tabloyu şimdilik silin, resimleri eklediğinizde geri koyun.
+## 👤 Author
 
-Bu haliyle reponuz hem teknik olarak hem de görsel olarak çok daha profesyonel görünecektir. Başarılar! 🚀
+**Ongun Akay** – Mobile Developer passionate about building clean, maintainable iOS applications.
+
+- GitHub: [@ongunakaycom](https://github.com/ongunakaycom)
+- Project: [Little-Lemon-Food-Ordering-App](https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App)
+- Portfolio: [ongunakaycom.github.io](https://ongunakaycom.github.io/Little-Lemon-Food-Ordering-App/)
+- Email: info@ongunakay.com
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [`LICENSE`](./LICENSE) file for details.
+
+---
+
+*Built with ❤️ during the Meta iOS Developer Professional Certificate program on Coursera.*
