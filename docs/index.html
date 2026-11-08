@@ -13,31 +13,32 @@
             --light: #f8f9fa;
             --muted: #6c757d;
             --border: #dee2e6;
-            --success: #28a745;
         }
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background: var(--light);
-            margin: 0;
-            padding: 0;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
+        /* Navigation */
         nav {
-            background: var(--primary);
-            padding: 1.5rem 0;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
             margin-bottom: 2rem;
         }
 
@@ -48,22 +49,25 @@
         }
 
         nav a {
-            color: white;
+            color: var(--dark);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             padding: 3rem 2rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.2);
         }
 
         .hero h1 {
@@ -74,10 +78,9 @@
         .hero p {
             font-size: 1.1rem;
             opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
+        /* Sections */
         .section {
             margin-bottom: 3rem;
         }
@@ -86,148 +89,123 @@
             color: var(--dark);
             border-bottom: 2px solid var(--border);
             padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
-        .section h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
+        /* Card (About) */
         .card {
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px var(--primary);
+            border-left: 4px solid var(--primary);
         }
 
         .card p {
             color: var(--muted);
-            margin-bottom: 0;
         }
 
+        /* Technologies Badges */
         .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 8px;
-            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .tech-tag {
+        .badge {
             background: white;
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 6px 10px;
-            font-size: 0.85rem;
+            padding: 6px 14px;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--dark);
-            text-align: center;
+            transition: all 0.2s ease;
         }
 
-        .tech-tag:hover {
+        .badge:hover {
             border-color: var(--primary);
-            background: rgba(26, 115, 232, 0.1);
-            transform: translateY(-2px);
+            color: var(--primary);
+            background: rgba(26, 115, 232, 0.05);
         }
 
+        /* Key Features Grid */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
         }
 
         .feature {
             background: white;
             border-radius: 8px;
-            padding: 1rem;
+            padding: 1.2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.85rem;
-            transition: transform 0.2s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-2px);
+            align-items: flex-start; /* Yazının ikonla hizalanması için */
+            gap: 12px;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
         }
 
         .feature .icon {
-            width: 20px;
-            height: 20px;
+            flex-shrink: 0; /* İkonun sıkışmasını önler */
+            width: 24px;
+            height: 24px;
             background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 11px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th, td {
-            padding: 0.6rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background: #f8f9fa;
-            font-weight: 600;
-            font-size: 0.8rem;
-        }
-
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 1rem 0;
-        }
-
-        .badge {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 4px 8px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
+        /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
+            background: white;
+            border-top: 1px solid var(--border);
             padding: 2rem 0;
             margin-top: 3rem;
+            text-align: center;
         }
 
-        footer .container {
+        footer p {
+            color: var(--muted);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer .links {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav>
-            <div class="container">
-                <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">🍋 Little Lemon</a>
-                <a href="https://ongunakay.com">Portfolio</a>
-            </div>
-        </nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">🍋 Little Lemon</a>
+            <a href="https://ongunakay.com">Portfolio</a>
+        </div>
+    </nav>
 
+    <div class="container">
         <!-- Hero -->
         <div class="hero">
             <h1>🍋 Little Lemon</h1>
@@ -236,70 +214,64 @@
 
         <!-- About -->
         <section class="section" id="about">
-            <div class="container">
-                <div class="card">
-                    <h2>About the App</h2>
-                    <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
-                </div>
+            <h2>About the App</h2>
+            <div class="card">
+                <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
             </div>
         </section>
 
         <!-- Technologies -->
         <section class="section" id="technologies">
-            <div class="container">
-                <h2>🛠 Technologies</h2>
-                <div class="tech-stack">
-                    <span class="badge">Swift 5.7+</span>
-                    <span class="badge">SwiftUI</span>
-                    <span class="badge">MVVM</span>
-                    <span class="badge">CoreData</span>
-                    <span class="badge">Combine</span>
-                    <span class="badge">Xcode 14+</span>
-                    <span class="badge">iOS 15+</span>
-                </div>
+            <h2>🛠 Technologies</h2>
+            <div class="tech-stack">
+                <span class="badge">Swift 5.7+</span>
+                <span class="badge">SwiftUI</span>
+                <span class="badge">MVVM</span>
+                <span class="badge">CoreData</span>
+                <span class="badge">Combine</span>
+                <span class="badge">Xcode 14+</span>
+                <span class="badge">iOS 15+</span>
             </div>
         </section>
 
         <!-- Key Features -->
         <section class="section" id="features">
-            <div class="container">
-                <h2>✨ Key Features</h2>
-                <div class="features">
-                    <div class="feature">
-                        <span class="icon">1</span>
-                        <strong>Onboarding</strong> with persistent user profile
-                    </div>
-                    <div class="feature">
-                        <span class="icon">2</span>
-                        <strong>Menu</strong> with search & filtering
-                    </div>
-                    <div class="feature">
-                        <span class="icon">3</span>
-                        <strong>Detail Views</strong> with AsyncImage
-                    </div>
-                    <div class="feature">
-                        <span class="icon">4</span>
-                        <strong>User Profile</strong> with encryption
-                    </div>
-                    <div class="feature">
-                        <span class="icon">5</span>
-                        <strong>CoreData</strong> persistence
-                    </div>
+            <h2>✨ Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <span class="icon">1</span>
+                    <div><strong>Onboarding</strong><br>with persistent user profile</div>
+                </div>
+                <div class="feature">
+                    <span class="icon">2</span>
+                    <div><strong>Menu</strong><br>with search & filtering</div>
+                </div>
+                <div class="feature">
+                    <span class="icon">3</span>
+                    <div><strong>Detail Views</strong><br>with AsyncImage</div>
+                </div>
+                <div class="feature">
+                    <span class="icon">4</span>
+                    <div><strong>User Profile</strong><br>with encryption</div>
+                </div>
+                <div class="feature">
+                    <span class="icon">5</span>
+                    <div><strong>CoreData</strong><br>persistence</div>
                 </div>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <p>Built with ❤️ during the Meta iOS Developer Certificate program</p>
-                <div style="display: flex; gap: 1rem;">
-                    <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App" style="color: var(--primary); text-decoration: none;">GitHub</a>
-                    <a href="https://ongunakay.com" style="color: var(--primary); text-decoration: none;">Website</a>
-                    <a href="mailto:info@ongunakay.com" style="color: var(--primary); text-decoration: none;">Email</a>
-                </div>
-            </div>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Built with ❤️ during the Meta iOS Developer Certificate program</p>
+            <div class="links">
+                <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">GitHub</a>
+                <a href="https://ongunakay.com">Website</a>
+                <a href="mailto:info@ongunakay.com">Email</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
