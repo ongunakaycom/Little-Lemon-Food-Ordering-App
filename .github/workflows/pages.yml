@@ -1,0 +1,111 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Default GITHUB_TOKEN permissions are sufficient for publishing to GitHub Pages.
+# If you see issues, ensure the token has the contents: write permission.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent workflow run for this job (disable if analyzing timeout errors)
+#cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛠️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📀 Setup Ruby (for GitHub Pages dependency)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: 📄 Generate index.html from README
+        run: |
+          echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon - iOS Food Ordering App</title>
+    <style>
+        body { max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f8f9fa; color: #333; }
+        h1 { color: #28a745; font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: #666; font-size: 1.2rem; margin-bottom: 30px; }
+        .card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .tech-stack { background: #f0f7ff; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .feature { padding: 12px 16px; background: #f8f9fa; border-radius: 8px; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #666; font-size: 0.9rem; }
+        .gallery { text-align: center; margin: 30px 0; }
+        .gallery img { max-width: 100%; border-radius: 8px; margin: 10px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        nav a { color: #0066cc; text-decoration: none; margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">View Source on GitHub</a>
+    </div>
+    
+    <h1>🍋 Little Lemon</h1>
+    <p class="subtitle">iOS Food Ordering App • Meta iOS Developer Certificate Capstone</p>
+    
+    <div class="card">
+        <h2>About the App</h2>
+        <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
+    </div>
+    
+    <div class="tech-stack">
+        <h3>Tech Stack</h3>
+        <ul>
+            <li>Swift 5.7+</li>
+            <li>SwiftUI</li>
+            <li>MVVM Architecture</li>
+            <li>CoreData</li>
+            <li>URLSession + Combine</li>
+            <li>Xcode 14+</li>
+            <li>iOS (iPhone & iPad)</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h3>✨ Key Features</h3>
+        <div class="features">
+            <div class="feature">📱 Onboarding with persistent user profile</div>
+            <div class="feature">🍽 Menu with search & filtering</div>
+            <div class="feature">📄 Detail views with AsyncImage</div>
+            <div class="feature">👤 User Profile with encryption</div>
+            <div class="feature">🗄 CoreData persistence</div>
+        </div>
+    </div>
+    
+    <div class="gallery">
+        <img src="https://raw.githubusercontent.com/ongunakaycom/Little-Lemon-Food-Ordering-App/main/LittleLemonApp/Assets.xcassets/Logo.imageset/Logo.png" alt="Little Lemon Logo" width="200">
+        <p>App Logo</p>
+    </div>
+    
+    <div class="footer">
+        Portfolio project for Meta iOS Developer Certificate • Ongun Akay<br>
+        <a href="https://github.com/ongunakaycom">GitHub</a> • 
+        <a href="https://ongunakay.com">Portfolio</a>
+    </div>
+</body>
+</html>' > docs/index.html
+
+      - name: 📤 Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/index.html
+
+      - name: 🌐 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
