@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Lemon – Meta iOS Developer Certificate Capstone</title>
+    <title>Little Lemon – iOS Food Ordering App</title>
     <style>
         :root {
-            --primary: #ffc107;
-            --primary-light: #e4b320;
+            --primary: #1a73e8;
+            --primary-light: #1557b0;
+            --secondary: #ffc107;
             --dark: #343a40;
             --light: #f8f9fa;
             --muted: #6c757d;
             --border: #dee2e6;
-            --green: #28a745;
+            --success: #28a745;
         }
 
         * {
@@ -29,14 +30,14 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         nav {
-            background: --primary;
-            padding: 1rem 0;
+            background: var(--primary);
+            padding: 1.5rem 0;
             margin-bottom: 2rem;
         }
 
@@ -47,18 +48,18 @@
         }
 
         nav a {
-            color: --dark;
+            color: white;
             text-decoration: none;
             font-weight: 500;
         }
 
         nav a:hover {
-            color: --primary-light;
+            color: var(--secondary);
         }
 
         .hero {
-            background: --primary;
-            color: --dark;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
             padding: 3rem 2rem;
             margin-bottom: 2rem;
             border-radius: 8px;
@@ -66,7 +67,6 @@
         }
 
         .hero h1 {
-            color: --dark;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
@@ -83,15 +83,15 @@
         }
 
         .section h2 {
-            color: --dark;
-            border-bottom: 2px solid --border;
+            color: var(--dark);
+            border-bottom: 2px solid var(--border);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
             font-size: 1.8rem;
         }
 
         .section h3 {
-            color: --green;
+            color: var(--primary);
             margin-top: 0;
             font-size: 1.4rem;
         }
@@ -102,10 +102,11 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             padding: 2rem;
             margin-bottom: 1.5rem;
+            border-left: 4px var(--primary);
         }
 
         .card p {
-            color: --muted;
+            color: var(--muted);
             margin-bottom: 0;
         }
 
@@ -118,13 +119,19 @@
 
         .tech-tag {
             background: white;
-            border: 1px solid --border;
-            border-radius: 16px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
             padding: 6px 10px;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             font-weight: 500;
-            color: --dark;
+            color: var(--dark);
             text-align: center;
+        }
+
+        .tech-tag:hover {
+            border-color: var(--primary);
+            background: rgba(26, 115, 232, 0.1);
+            transform: translateY(-2px);
         }
 
         .features {
@@ -137,20 +144,23 @@
         .feature {
             background: white;
             border-radius: 8px;
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 0.85rem;
         }
 
-        .feature .dot {
-            width: 8px;
-            height: 8px;
-            background: --green;
+        .feature .icon {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
             border-radius: 50%;
-            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
         }
 
         table {
@@ -162,7 +172,7 @@
         th, td {
             padding: 0.6rem;
             text-align: left;
-            border-bottom: 1px solid --border;
+            border-bottom: 1px solid var(--border);
         }
 
         th {
@@ -180,18 +190,18 @@
 
         .badge {
             background: white;
-            border: 1px solid --border;
+            border: 1px solid var(--border);
             border-radius: 10px;
             padding: 4px 8px;
             font-size: 0.65rem;
             font-weight: 600;
-            color: --dark;
+            color: var(--dark);
         }
 
         footer {
-            background: --dark;
+            background: var(--dark);
             color: white;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             margin-top: 3rem;
         }
 
@@ -199,12 +209,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .review-stats {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid --border;
         }
     </style>
 </head>
@@ -234,225 +238,62 @@
             </div>
         </section>
 
-        <!-- For Individuals -->
-        <section class="section" id="for-individuals">
+        <!-- Technologies -->
+        <section class="section" id="technologies">
             <div class="container">
-                <h2>👥 For Individuals</h2>
-                <p>Launch your career as an iOS developer with job-ready skills. This Meta Professional Certificate teaches you how to create applications for iOS systems, manage mobile app lifecycles, and build a portfolio of projects that show your ability to publish, deploy, and maintain iOS apps as well as cross-platform apps using React Native.</p>
-                <ul>
-                    <li>No degree or prior experience required to get started</li>
-                    <li>Build job-ready skills for an in-demand career</li>
-                    <li>Earn a shareable certificate to add to your LinkedIn profile</li>
-                    <li>Flexible schedule – learn at your own pace</li>
-                </ul>
-                <p><strong>Median salary and job opening data</strong> are sourced from Lightcast™ Job Postings Report.</p>
-            </div>
-        </section>
-
-        <!-- For Businesses -->
-        <section class="section" id-for-businesses">
-            <div class="container">
-                <h2>💼 For Businesses</h2>
-                <p>Build your team's iOS development capabilities with this comprehensive 12-course program. Employees gain hands-on experience creating iOS applications, working with web technologies, managing data on iOS applications, and building cross-platform applications using React Native.</p>
-                <ul>
-                    <li>Upskill teams with in-demand iOS development skills</li>
-                    <li>Build a portfolio of projects showcasing ability to publish, deploy and maintain iOS apps</li>
-                    <li>Prepare technical interviewees for iOS developer roles</li>
-                    <li>Access a shareable certificate for employee LinkedIn profiles</li>
-                </ul>
-                <p><strong>Trusted by enterprises:</strong> Petrobras, TATA, Danone, Capgemini, P&G and L'Oreal have enrolled teams in this program.</p>
-            </div>
-        </section>
-
-        <!-- For Universities -->
-        <section class="section" id="for-universities">
-            <div class="container">
-                <h2>🏫 For Universities</h2>
-                <p>Integrate this program into your computer science or mobile development curriculum. The Meta iOS Developer Professional Certificate provides a structured learning path, hands-on activities, and a capstone project that can be added to portfolios and showcased during job interviews.</p>
-                <ul>
-                    <li>Structured learning path – 12 courses over 8 months at 7 hours per week</li>
-                    <li>Hands-on activities – Create protocols in Swift, build UIs in SwiftUI, develop native iOS mobile applications</li>
-                    <li>Capstone project – Complete a capstone project in the final course that can be added to portfolios</li>
-                    <li>University credit eligibility – This Professional Certificate has ACE® recommendation</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- For Governments -->
-        <section class="section" id="for-governments">
-            <div class="container">
-                <h2>🏛 For Governments</h2>
-                <p>Support workforce development and digital skills transformation with this certified iOS development program. The Meta iOS Developer Professional Certificate can be offered as part of government-sponsored reskilling and upskilling initiatives.</p>
-                <ul>
-                    <li>Certified program with ACE® credit recommendations</li>
-                    <li>Scalable learning path for large workforce groups</li>
-                    <li>Partnership opportunities for government training initiatives</li>
-                    <li>Recognized credential valued by employers in tech sector</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- What You'll Learn -->
-        <section class="section" id="what-youll-learn">
-            <div class="container">
-                <h2>📚 What You'll Learn</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Course</th>
-                            <th>Hours</th>
-                            <th>Key Skills</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Course 1: Introduction to iOS Mobile Application Development</td>
-                            <td>12 hours</td>
-                            <td>iOS programming concepts, UI creation basics</td>
-                        </tr>
-                        <tr>
-                            <td>Course 2: Version Control</td>
-                            <td>16 hours</td>
-                            <td>Git, GitHub, version control best practices</td>
-                        </tr>
-                        <tr>
-                            <td>Course 3: Programming Fundamentals in Swift</td>
-                            <td>26 hours</td>
-                            <td>Swift programming, data structures</td>
-                        </tr>
-                        <tr>
-                            <td>Course 4: Principles of UX/UI Design</td>
-                            <td>21 hours</td>
-                            <td>User centered design, UX/UI principles</td>
-                        </tr>
-                        <tr>
-                            <td>Course 5: Create the User Interface with SwiftUI</td>
-                            <td>21 hours</td>
-                            <td>SwiftUI, adaptive layouts, UI best practices</td>
-                        </tr>
-                        <tr>
-                            <td>Course 6: Advanced Programming in Swift</td>
-                            <td>19 hours</td>
-                            <td>Advanced Swift, memory management</td>
-                        </tr>
-                        <tr>
-                            <td>Course 7: Working with Data in iOS</td>
-                            <td>19 hours</td>
-                            <td>Core Data, web technologies, data management</td>
-                        </tr>
-                        <tr>
-                            <td>Course 8: Mobile Development and JavaScript</td>
-                            <td>45 hours</td>
-                            <td>JavaScript, cross-platform foundations</td>
-                        </tr>
-                        <tr>
-                            <td>Course 9: React Basics</td>
-                            <td>30 hours</td>
-                            <td>React, component-based UI</td>
-                        </tr>
-                        <tr>
-                            <td>Course 10: React Native</td>
-                            <td>38 hours</td>
-                            <td>Cross-platform iOS/Android development</td>
-                        </tr>
-                        <tr>
-                            <td>Course 11: iOS App Capstone</td>
-                            <td>16 hours</td>
-                            <td>Complete iOS app, portfolio project</td>
-                        </tr>
-                        <tr>
-                            <td>Course 12: Coding Interview Preparation</td>
-                            <td>11 hours</td>
-                            <td>Technical interview preparation</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2>🛠 Technologies</h2>
+                <div class="tech-stack">
+                    <span class="badge">Swift 5.7+</span>
+                    <span class="badge">SwiftUI</span>
+                    <span class="badge">MVVM</span>
+                    <span class="badge">CoreData</span>
+                    <span class="badge">Combine</span>
+                    <span class="badge">Xcode 14+</span>
+                    <span class="badge">iOS 15+</span>
+                </div>
             </div>
         </section>
 
         <!-- Key Features -->
-        <section class="section" id="key-features">
+        <section class="section" id="features">
             <div class="container">
                 <h2>✨ Key Features</h2>
                 <div class="features">
                     <div class="feature">
-                        <span class="dot"></span>
+                        <span class="icon">1</span>
                         <strong>Onboarding</strong> with persistent user profile
                     </div>
                     <div class="feature">
-                        <span class="dot"></span>
+                        <span class="icon">2</span>
                         <strong>Menu</strong> with search & filtering
                     </div>
                     <div class="feature">
-                        <span class="dot"></span>
+                        <span class="icon">3</span>
                         <strong>Detail Views</strong> with AsyncImage
                     </div>
                     <div class="feature">
-                        <span class="dot"></span>
+                        <span class="icon">4</span>
                         <strong>User Profile</strong> with encryption
                     </div>
                     <div class="feature">
-                        <span class="dot"></span>
+                        <span class="icon">5</span>
                         <strong>CoreData</strong> persistence
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technologies -->
-        <section class="section" id="technologies">
+        <!-- Footer -->
+        <footer>
             <div class="container">
-                <h2>🛠 Technologies</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;">
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>SwiftUI</strong><br>Declarative UI
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>CoreData</strong><br>Persistence
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>MVVM</strong><br>Architecture
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>Combine</strong><br>Reactive state
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>Xcode</strong><br>IDE
-                    </div>
-                    <div style="background: white; padding: 8px; border-radius: 6px; border: 1px solid --border; text-align: center;">
-                        <strong>iOS 15+</strong><br>Apple platform
-                    </div>
+                <p>Built with ❤️ during the Meta iOS Developer Certificate program</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App" style="color: var(--primary); text-decoration: none;">GitHub</a>
+                    <a href="https://ongunakay.com" style="color: var(--primary); text-decoration: none;">Website</a>
+                    <a href="mailto:info@ongunakay.com" style="color: var(--primary); text-decoration: none;">Email</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Review Stats -->
-        <section class="review-stats">
-            <div class="container">
-                <h3>📊 Course Reviews</h2>
-                <p>4.6 avg rating from 8,831 reviews across 12 courses</p>
-                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
-                    <div>
-                        <p>76.06% – 5 stars</p>
-                        <p>15.96% – 4 stars</p>
-                    </div>
-                    <div>
-                        <p>4.55% – 3 stars</p>
-                        <p>1.77% – 1 star</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </footer>
     </div>
-
-    <footer>
-        <div class="container">
-            <p>Meta iOS Developer Professional Certificate Capstone • Ongun Akay</p>
-            <div style="display: flex; gap: 1rem;">
-                <a href="https://github.com/ongunakaycom" style="color: --primary; text-decoration: none;">GitHub</a>
-                <a href="https://ongunakay.com" style="color: --primary; text-decoration: none;">Website</a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
