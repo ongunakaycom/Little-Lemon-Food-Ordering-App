@@ -39,6 +39,23 @@ Assets like food images, logos, and placeholders are stored in the `Little Lemon
 
 ---
 
+## 📸 Screenshots
+
+Visual overview of the app's key screens:
+
+| Screen | Image |
+|--------|-------|
+| **App Logo** | ![logo](github-assets/logo.png) |
+| **Hero Section** | ![hero-image](github-assets/hero-image.png) |
+| **Greek Salad** | ![greek-salad](github-assets/greek-salad.png) |
+| **Bruschetta** | ![bruschetta](github-assets/bruschetta.png) |
+| **User Profile** | ![profile](github-assets/profile.png) |
+| **Restaurant** | ![restaurant](github-assets/restaurant.png) |
+
+*Images sourced from `Little Lemon App Assets/` folder — included in the GitHub repository for portfolio showcase.*
+
+---
+
 ## 🔐 Architecture
 
 The app follows **MVVM** separation of concerns:
