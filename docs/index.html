@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Lemon – iOS Food Ordering App</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>">
     <style>
         :root {
             --primary: #1a73e8;
             --primary-light: #1557b0;
-            --secondary: #ffc107;
             --dark: #343a40;
             --light: #f8f9fa;
             --muted: #6c757d;
@@ -128,6 +128,7 @@
             border-color: var(--primary);
             color: var(--primary);
             background: rgba(26, 115, 232, 0.05);
+            transform: translateY(-2px);
         }
 
         /* Key Features Grid */
@@ -143,14 +144,14 @@
             padding: 1.2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             display: flex;
-            align-items: flex-start; /* Yazının ikonla hizalanması için */
+            align-items: flex-start;
             gap: 12px;
             font-size: 0.95rem;
             border: 1px solid var(--border);
         }
 
         .feature .icon {
-            flex-shrink: 0; /* İkonun sıkışmasını önler */
+            flex-shrink: 0;
             width: 24px;
             height: 24px;
             background: var(--primary);
