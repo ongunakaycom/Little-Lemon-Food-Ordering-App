@@ -1,6 +1,6 @@
-# 🌩 Little Lemon – Cloud Engineer Portfolio (Retired Capstone)
+# 🌩 Little Lemon – Cloud Engineer Portfolio
 
-**Little Lemon** was the capstone project for the Meta iOS Developer Professional Certificate on Coursera, built with SwiftUI, CoreData, and Combine. This project has been retired from active portfolio showcase.
+**Little Lemon** was the capstone project for the Meta iOS Developer Professional Certificate on Coursera, built with SwiftUI, CoreData, and Combine. This project showcases UI/UX development, persistence, and architectural patterns.
 
 ---
 
@@ -13,15 +13,16 @@
 - 📚 **Certified Professional**: 225+ completed certifications, including 43+ Google Cloud Skill Badges
 - 🎯 **Current Goal**: Preparing for Professional Cloud Architect (PCA) certification
 
-### 🔧 Areas of Expertise
+### 🛠 Technologies I Work With
 
-| Domain | Technologies |
-|--------|------------|
-| **Cloud Native** | Cloud Run, GKE, Firebase, Cloud Functions, Cloud Storage, IAM |
-| **LLM & AI** | OpenAI API, Anthropic, Gemini, LangChain, LlamaIndex, RAG pipelines, AI agents |
-| **CI/CD** | GitHub Actions, Cloud Build, Terraform, Docker, Kubernetes |
-| **Migration** | Application migration to Cloud Run and GKE, legacy system modernization |
-| **Architecture** | Cloud-native design patterns, scalable architectures, cost optimization |
+| Category | Technologies |
+|----------|------------|
+| **Cloud Platform** | Google Cloud Platform (GCP), Cloud Run, GKE, Firebase, Cloud Functions |
+| **LLM & AI** | OpenAI API, Anthropic Claude, Gemini, LangChain, LlamaIndex, RAG systems, AI agents |
+| **Infrastructure** | Terraform, Docker, Kubernetes, GitHub Actions, Cloud Build |
+| **Languages** | Python, Go, JavaScript/TypeScript, SQL |
+| **Data & Analytics** | BigQuery, Pub/Sub, Cloud Storage, Dataproc, Vertex AI |
+| **Architecture** | Cloud-native, microservices, serverless, event-driven design |
 
 ### 📜 Professional Background
 
@@ -52,11 +53,11 @@ The project demonstrated:
 - JSON networking and data decoding
 - Unit testing with XCTest
 
-This repository has been **retired** from active portfolio showcase and replaced with Cloud Engineering and AI-focused projects.
+This repository now serves as a foundation for Cloud Engineering and AI-focused projects. The iOS development skills demonstrated here complement my current focus on cloud-native architectures and AI applications.
 
 ---
 
-## 🚀 Current Portfolio Projects
+## 🚀 Current Portfolio Focus
 
 For a showcase of my Cloud Engineering and AI expertise, please visit:
 
@@ -66,7 +67,7 @@ For a showcase of my Cloud Engineering and AI expertise, please visit:
 
 ---
 
-## 🛠 Technologies I Work With
+## 🛠 Key Technologies
 
 | Category | Technologies |
 |----------|------------|
@@ -89,4 +90,4 @@ For a showcase of my Cloud Engineering and AI expertise, please visit:
 
 ---
 
-*Retired iOS capstone project. Current focus: Cloud Engineering & AI/LLM development on Google Cloud.*
+*Capstone iOS project archived. Current focus: Cloud Engineering & AI/LLM development on Google Cloud.*
