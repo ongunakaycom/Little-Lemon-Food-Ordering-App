@@ -13,18 +13,6 @@
 
 > *This project was developed to showcase job-ready iOS development skills, including UI design, data persistence, networking, and clean architecture.*
 
----
-
-## 📸 Screenshots
-
-*(Lütfen buradaki resim yollarını kendi ekran görüntülerinizle değiştirin. Resimlerinizi `assets/` klasörüne koymayı unutmayın.)*
-
-| Onboarding | Home | Menu | Profile |
-| :---: | :---: | :---: | :---: |
-| ![Onboarding](assets/onboarding.png) | ![Home](assets/home.png) | ![Menu](assets/menu.png) | ![Profile](assets/profile.png) |
-
----
-
 ## 🛠 Technologies
 
 | Layer | Technology |
