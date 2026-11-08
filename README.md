@@ -14,13 +14,10 @@
 
 ---
 
+<!-- Screenshots section can be enabled once actual images are added to docs/assets/ -->
 ## 📸 Screenshots
 
-*(Note to author: Replace these placeholders with actual screenshots from your simulator. This is the most important step for a UI/UX portfolio!)*
-
-| Onboarding | Home & Menu | Detail View | User Profile |
-| :---: | :---: | :---: | :---: |
-| ![Onboarding](docs/assets/onboarding.png) | ![Home](docs/assets/home.png) | ![Detail](docs/assets/detail.png) | ![Profile](docs/assets/profile.png) |
+*(Coming soon)*
 
 ---
 
