@@ -61,19 +61,22 @@
         .hero {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 2rem;
             margin-bottom: 2rem;
             border-radius: 8px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Sections */
@@ -114,23 +117,27 @@
         .tech-stack {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 1rem;
+            gap: 12px;
+            margin-top: 1.5rem;
+            justify-items: center;
         }
 
         .tech-tag {
             background: white;
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 5px 12px;
+            padding: 8px 16px;
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--dark);
             transition: all 0.3s ease;
+            min-width: 140px;
+            text-align: center;
         }
 
         .tech-tag:hover {
             border-color: var(--primary);
+            background: rgba(40, 167, 69, 0.1);
             transform: translateY(-2px);
         }
 
@@ -138,53 +145,59 @@
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+            justify-items: center;
         }
 
         .feature {
             background: white;
             border-radius: 8px;
-            padding: 1rem 1.5rem;
+            padding: 1.2rem 1.8rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
+            min-height: 80px;
+            justify-content: center;
+            text-align: center;
         }
 
         .feature .icon {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         /* Architecture Diagrams */
         .diagram {
             background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-top: 1rem;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 2rem;
             position: relative;
+            border-top: 4px solid var(--primary);
         }
 
         .diagram::before {
             content: '📊';
             position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 0.8rem;
+            top: 15px;
+            right: 20px;
+            font-size: 1rem;
             color: var(--primary);
         }
 
         .mermaid {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         /* Tables */
@@ -208,12 +221,12 @@
         /* Navigation Flow */
         .nav-flow {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-top: 1rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 2rem;
         }
 
         .nav-step {
@@ -224,14 +237,15 @@
         .nav-step .number {
             background: var(--primary);
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
         }
 
         /* Footer */
