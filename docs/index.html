@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Lemon - iOS Food Ordering App Portfolio</title>
+    <title>Ongun Akay – Cloud Engineer & AI Specialist Portfolio</title>
     <style>
         :root {
-            --primary: #28a745;
-            --primary-light: #218838;
+            --primary: #1a73e8;
+            --primary-light: #1557b0;
             --secondary: #ffc107;
             --dark: #343a40;
             --light: #f8f9fa;
             --muted: #6c757d;
             --border: #dee2e6;
+            --success: #28a745;
         }
 
         * {
@@ -36,8 +37,8 @@
 
         /* Navigation */
         nav {
-            background: var(--dark);
-            padding: 1rem 0;
+            background: var(--primary);
+            padding: 1.5rem 0;
             margin-bottom: 2rem;
         }
 
@@ -54,7 +55,7 @@
         }
 
         nav a:hover {
-            color var(--secondary);
+            color: var(--secondary);
         }
 
         /* Header/Hero */
@@ -117,152 +118,59 @@
         .tech-stack {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
-            margin-top: 1.5rem;
-            justify-items: center;
+            gap: 10px;
+            margin-top: 1rem;
         }
 
         .tech-tag {
             background: white;
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 8px 16px;
+            padding: 8px 12px;
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--dark);
             transition: all 0.3s ease;
-            min-width: 140px;
-            text-align: center;
         }
 
         .tech-tag:hover {
             border-color: var(--primary);
-            background: rgba(40, 167, 69, 0.1);
+            background: rgba(26, 115, 232, 0.1);
             transform: translateY(-2px);
         }
 
-        /* Features */
-        .features {
+        /* Features/Capabilities */
+        .capabilities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-            justify-items: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
-        .feature {
+        .capability {
             background: white;
             border-radius: 8px;
-            padding: 1.2rem 1.8rem;
+            padding: 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            min-height: 80px;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .feature .icon {
-            width: 24px;
-            height: 24px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 13px;
-        }
-
-        /* Architecture Diagrams */
-        .diagram {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-top: 2rem;
-            position: relative;
             border-top: 4px solid var(--primary);
         }
 
-        .diagram::before {
-            content: '📊';
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1rem;
-            color: var(--primary);
-        }
-
-        .mermaid {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background: #f8f9fa;
-            font-weight: 600;
-        }
-
-        /* Navigation Flow */
-        .nav-flow {
-            display: flex;
-            gap: 2.5rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-top: 2rem;
-        }
-
-        .nav-step {
-            flex: 1;
-            text-align: center;
-        }
-
-        .nav-step .number {
+        .capability .icon {
+            width: 28px;
+            height: 28px;
             background: var(--primary);
-            color: white;
-            width: 36px;
-            height: 36px;
             border-radius: 50%;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
             color: white;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            font-size: 14px;
         }
 
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Badges style */
+        /* Badges */
         .badges {
             display: flex;
             flex-wrap: wrap;
@@ -293,8 +201,8 @@
         <!-- Navigation -->
         <nav>
             <div class="container">
-                <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">
-                    🍋 Little Lemon
+                <a href="https://github.com/ongunakaycom">
+                    🌩 Cloud Engineer
                 </a>
                 <a href="https://ongunakay.com">Portfolio</a>
             </div>
@@ -302,266 +210,140 @@
 
         <!-- Hero -->
         <div class="hero">
-            <h1>🍋 Little Lemon</h1>
-            <p>iOS Food Ordering App • Meta iOS Developer Certificate Capstone</p>
+            <h1>🌩 Cloud Engineer Portfolio</h1>
+            <p>Google Cloud Specialist · AI & LLM Engineer · 14+ Years Experience</p>
         </div>
 
         <!-- About -->
         <section class="section" id="about">
             <div class="container">
                 <div class="card">
-                    <h2>About the App</h2>
-                    <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
+                    <h2>About Me</h2>
+                    <p>Cloud Engineer with 14+ years of experience in system design and backend engineering. Google Cloud Specialist focusing on Cloud Run, GKE, Firebase, and AI/LLM applications. Building LLM, RAG, and AI agent applications using OpenAI, Anthropic, Gemini APIs and frameworks like LangChain, LlamaIndex.</p>
+                    <p>225+ completed certifications including 43+ Google Cloud Skill Badges. Currently preparing for Professional Cloud Architect (PCA) certification.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Tech Stack -->
-        <section class="section" id="tech-stack">
+        <!-- Expertise Areas -->
+        <section class="section" id="expertise">
             <div class="container">
-                <h2>🛠 Tech Stack</h2>
+                <h2>🔧 Areas of Expertise</h2>
                 <div class="badges">
-                    <span class="badge">Swift 5.7+</span>
-                    <span class="badge">SwiftUI</span>
-                    <span class="badge">MVVM</span>
-                    <span class="badge">CoreData</span>
-                    <span class="badge">Combine</span>
-                    <span class="badge">Xcode 14+</span>
-                    <span class="badge">iOS 15+</span>
-                    <span class="badge">Meta Certificate</span>
+                    <span class="badge">Google Cloud</span>
+                    <span class="badge">Cloud Run</span>
+                    <span class="badge">GKE</span>
+                    <span class="badge">Firebase</span>
+                    <span class="badge">LLM & AI</span>
+                    <span class="badge">RAG Systems</span>
+                    <span class="badge">AI Agents</span>
+                    <span class="badge">CI/CD</span>
+                    <span class="badge">Terraform</span>
+                    <span class="badge">Certified</span>
                 </div>
             </div>
         </section>
 
-        <!-- Key Features -->
-        <section class="section" id="features">
+        <!-- Capabilities -->
+        <section class="section" id="capabilities">
             <div class="container">
-                <h2>✨ Key Features</h2>
-                <div class="features">
-                    <div class="feature">
-                        <div class="icon">1</div>
+                <h2>🚀 What I Do</h2>
+                <div class="capabilities">
+                    <div class="capability">
+                        <div class="icon">🏗</div>
                         <div>
-                            <strong>Onboarding</strong> with persistent user profile
+                            <strong>Cloud-Native Architectures</strong><br>Design and deploy on GCP (Cloud Run, GKE, Firebase)
                         </div>
                     </div>
-                    <div class="feature">
-                        <div class="icon">2</div>
+                    <div class="capability">
+                        <div class="icon">🤖</div>
                         <div>
-                            <strong>Menu</strong> with search & filtering
+                            <strong>LLM & AI Applications</strong><br>Build using OpenAI, Anthropic, Gemini APIs
                         </div>
                     </div>
-                    <div class="feature">
-                        <div class="icon">3</div>
+                    <div class="capability">
+                        <div class="icon">🔧</div>
                         <div>
-                            <strong>Detail Views</strong> with AsyncImage
+                            <strong>CI/CD Pipelines</strong><br>GitHub Actions, Cloud Build, automated deployment
                         </div>
                     </div>
-                    <div class="feature">
-                        <div class="icon">4</div>
+                    <div class="capability">
+                        <div class="icon">🔄</div>
                         <div>
-                            <strong>User Profile</strong> with encryption
+                            <strong>Application Migration</strong><br>Legacy to Cloud Run/GKE modernization
                         </div>
                     </div>
-                    <div class="feature">
-                        <div class="icon">5</div>
+                    <div class="capability">
+                        <div class="icon">📚</div>
                         <div>
-                            <strong>CoreData</strong> persistence
+                            <strong>Certifications</strong><br>225+ completed, 43+ Google Cloud Badges
+                        </div>
+                    </div>
+                    <div class="capability">
+                        <div class="icon">🎯</div>
+                        <div>
+                            <strong>Professional Growth</strong><br>Preparing for PCA certification
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Architecture -->
-        <section class="section" id="architecture">
+        <!-- Technologies -->
+        <section class="section" id="technologies">
             <div class="container">
-                <h2>🏗 Architecture</h2>
-                <p>The app follows the <strong>MVVM (Model-View-ViewModel)</strong> architectural pattern, separated into three main components:</p>
-
-                <!-- Models -->
-                <div class="card" style="margin-top: 0;">
-                    <h3>📦 Models (<code>Models/</code>)</h3>
-                    <ul>
-                        <li><strong>MenuItem</strong> & <strong>MenuList</strong> – Codable structs for JSON decoding from the API</li>
-                        <li><strong>Dish</strong> – CoreData entity for persistent menu storage</li>
-                        <li>Responsible for data representation and serialization</li>
-                    </ul>
-                </div>
-
-                <!-- Views -->
-                <div class="card">
-                    <h3>👁️ Views (<code>Views/</code>)</h3>
-                    <p>SwiftUI screens that render the UI:</p>
-                    <ul>
-                        <li><strong>Onboarding</strong> – User registration flow</li>
-                        <li><strong>Home</strong> / <strong>MainScreen</strong> – Container with Header + Menu</li>
-                        <li><strong>Menu</strong> – Search, category toggles (starters/mains/desserts/drinks), dish list from CoreData</li>
-                        <li><strong>FoodItem</strong> – List row component with image, title, description, price</li>
-                        <li><strong>DetailItem</strong> – Full-screen dish view with AsyncImage, title, description, price</li>
-                        <li><strong>Hero</strong> – Restaurant description section ("Little Lemon – Chicago")</li>
-                        <li><strong>Header</strong> – Top bar with profile avatar navigation</li>
-                        <li><strong>UserProfile</strong> – Personal information edit with encryption (AES.GCM) and toggle settings</li>
-                    </ul>
-                </div>
-
-                <!-- ViewModels -->
-                <div class="card">
-                    <h3>🧠 ViewModels (<code>ViewModels/</code>)</h3>
-                    <ul>
-                        <li><strong>ViewModel</strong> – Business logic and CoreData operations</li>
-                        <li>Handles user input validation (<code>validateUserInput()</code>)</li>
-                        <li>Manages UserDefaults persistence (first name, last name, email, phone, settings)</li>
-                        <li>Email encryption using <code>CryptoKit</code> (AES.GCM)</li>
-                        <li>Error state management (<code>errorMessage</code>, <code>errorMessageShow</code>)</li>
-                    </ul>
-                </div>
-
-                <!-- Data Flow -->
-                <div class="section" style="margin-top: 2rem;">
-                    <h3>📊 Data Flow</h3>
-                    <div class="mermaid">
-                        flowchart LR
-                            JSON["JSON API\n(menu.json)"] -->|URLSession decoding| Models
-                            Models -->|CoreData persistence| Persistence
-                            Persistence -->|FetchedResults| ViewModels
-                            ViewModels -->|SwiftUI data binding| Views
-                            Views -->|User interaction| User
+                <h2>🛠 Technologies & Tools</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px;">
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>Google Cloud</strong><br>GCP, Cloud Run, GKE, Firebase
                     </div>
-                </div>
-
-                <!-- Key Architectural Decisions -->
-                <div class="card" style="margin-top: 1rem;">
-                    <h3>🔄 Key Architectural Decisions</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Decision</th>
-                                <th>Reason</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>MVVM</strong></td>
-                                <td>Separation of concerns, testability, SwiftUI-friendly</td>
-                            </tr>
-                            <tr>
-                                <td><strong>CoreData</strong></td>
-                                <td>Local persistence for menu data, survives app restarts</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Combine</strong></td>
-                                <td>Reactive state management, <code>@Published</code> properties</td>
-                            </tr>
-                            <tr>
-                                <td><strong>AES.GCM encryption</strong></td>
-                                <td>Secure email storage in UserDefaults</td>
-                            </tr>
-                            <tr>
-                                <td><strong>URLSession</strong></td>
-                                <td>Network fetching from GitHub API for menu data</td>
-                            </tr>
-                            <tr>
-                                <td><strong>FetchedObjects</strong></td>
-                                <td>Reactive SwiftUI wrapper for CoreData fetch results</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Navigation Flow -->
-                <div class="section" style="margin-top: 1rem;">
-                    <h3>📱 Navigation Flow</h3>
-                    <div class="nav-flow">
-                        <div class="nav-step">
-                            <div class="number">1</div>
-                            <strong>Onboarding</strong>
-                        </div>
-                        <div class="nav-step">
-                            <div class="number">2</div>
-                            <strong>Home</strong>
-                        </div>
-                        <div class="nav-step">
-                            <div class="number">3</div>
-                            <strong>Menu</strong>
-                        </div>
-                        <div class="nav-step">
-                            <div class="number">4</div>
-                            <strong>DetailItem</strong>
-                        </div>
-                        <div class="nav-step">
-                            <div class="number">5</div>
-                            <strong>UserProfile</strong>
-                        </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>LLM & AI</strong><br>OpenAI, Anthropic, Gemini
                     </div>
-                </div>
-
-                <!-- Key Components -->
-                <div class="diagram" style="margin-top: 1rem;">
-                    <h3>⚙️ Key Components</h3>
-                    <div class="mermaid">
-                        flowchart TB
-                            direction TB
-                            subgraph "Presentation Layer"
-                                V[SwiftUI Views]
-                            end
-                            subgraph "Business Logic Layer"
-                                VM[ViewModel]
-                            end
-                            subgraph "Data Layer"
-                                DC[CoreData]
-                                VW[ViewModel Wrapper]
-                            end
-                            subgraph "Networking"
-                                NS[URLSession]
-                            end
-                            
-                            V <--> VM
-                            VM <--> DC
-                            NS -->|Menu JSON| DC
-                            VW -->|FetchResults| V
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>LangChain</strong><br>AI agent frameworks
                     </div>
-                </div>
-
-                <!-- Technologies Used -->
-                <div style="margin-top: 2rem;">
-                    <h3>🛠 Technologies Used</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px;">
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>SwiftUI</strong><br>Declarative UI framework
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>MVVM</strong><br>Architectural pattern
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>CoreData</strong><br>Local persistence
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>Combine</strong><br>Reactive programming
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>URLSession</strong><br>Networking
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>CryptoKit</strong><br>AES.GCM encryption
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>GitHub Actions</strong><br>CI/CD pipeline
-                        </div>
-                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
-                            <strong>GitHub Pages</strong><br>Static site hosting
-                        </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>Docker</strong><br>Containerization
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>Kubernetes</strong><br>GKE engine
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>Terraform</strong><br>Infrastructure as Code
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>GitHub Actions</strong><br>CI/CD automation
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 1px solid var(--border); text-align: center;">
+                        <strong>BigQuery</strong><br>Data warehouse
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Certifications -->
+        <section class="section" id="certifications">
+            <div class="container">
+                <h2>📜 Professional Certifications</h2>
+                <p>225+ completed certifications including:</p>
+                <ul style="margin-bottom: 0;">
+                    <li>43+ Google Cloud Skill Badges</li>
+                    <li>Professional Cloud Architect (PCA) – In Preparation</li>
+                    <li>Associate Cloud Engineer – Certified</li>
+                    <li>Multiple specialized certifications in Data, AI, Infrastructure</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
         <footer>
             <div class="container">
-                <p>Portfolio project for Meta iOS Developer Certificate • Ongun Akay</p>
-                <div style="display: flex; gap: 1rem;">
-                    <a href="https://github.com/ongunakaycom" style="color: white; text-decoration: none;">GitHub</a>
-                    <a href="https://ongunakay.com" style="color: white; text-decoration: none;">Portfolio</a>
+                <p>Cloud Engineer & AI Specialist • Ongun Akay</p>
+                <div style="display: flex; gap: 1.5rem; margin-top: 1rem;">
+                    <a href="https://github.com/ongunakaycom" style="color: var(--primary); text-decoration: none;">GitHub</a>
+                    <a href="https://ongunakay.com" style="color: var(--primary); text-decoration: none;">Website</a>
+                    <a href="mailto:info@ongunakay.com" style="color: var(--primary); text-decoration: none;">Email</a>
                 </div>
             </div>
         </footer>
