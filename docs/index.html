@@ -5,208 +5,552 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Lemon - iOS Food Ordering App Portfolio</title>
     <style>
-        body { 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
-            background: #f8f9fa; 
-            color: #333; 
+        :root {
+            --primary: #28a745;
+            --primary-light: #218838;
+            --secondary: #ffc107;
+            --dark: #343a40;
+            --light: #f8f9fa;
+            --muted: #6c757d;
+            --border: #dee2e6;
         }
-        h1 { 
-            color: #28a745; 
-            font-size: 2.5rem; 
-            margin-bottom: 10px; 
+
+        * {
+            box-sizing: border-box;
         }
-        .subtitle { 
-            color: #666; 
-            font-size: 1.2rem; 
-            margin-bottom: 30px; 
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            margin: 0;
+            padding: 0;
         }
-        .card { 
-            background: white; 
-            border-radius: 12px; 
-            padding: 30px; 
-            margin-bottom: 25px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .tech-stack { 
-            background: #f0f7ff; 
-            padding: 15px; 
-            border-radius: 8px; 
-            margin: 20px 0; 
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
         }
-        .features { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 15px; 
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .feature { 
-            padding: 12px 16px; 
-            background: #f8f9fa; 
-            border-radius: 8px; 
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
         }
-        .footer { 
-            margin-top: 40px; 
-            padding-top: 20px; 
-            border-top: 1px solid #e0e0e0; 
-            color: #666; 
-            font-size: 0.9rem; 
+
+        nav a:hover {
+            color var(--secondary);
         }
-        .gallery { 
-            text-align: center; 
-            margin: 30px 0; 
+
+        /* Header/Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
         }
-        .gallery img { 
-            max-width: 100%; 
-            border-radius: 8px; 
-            margin: 10px 0; 
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        nav a { 
-            color: #0066cc; 
-            text-decoration: none; 
-            margin-right: 20px; 
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: var(--dark);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .section h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .card p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature .icon {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        /* Architecture Diagrams */
+        .diagram {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .diagram::before {
+            content: '📊';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+
+        .mermaid {
+            font-size: 0.85rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        /* Navigation Flow */
+        .nav-flow {
+            display: flex;
+            gap: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+        }
+
+        .nav-step {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-step .number {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Badges style */
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 1rem 0;
+        }
+
+        .badge {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .tech-tag:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">View Source on GitHub</a>
-    </nav>
-    
-    <h1>🍋 Little Lemon</h1>
-    <p class="subtitle">iOS Food Ordering App • Meta iOS Developer Certificate Capstone</p>
-    
-    <div class="card">
-        <h2>About the App</h2>
-        <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
-    </div>
-    
-    <div class="tech-stack">
-        <h3>Tech Stack</h3>
-        <ul>
-            <li>Swift 5.7+</li>
-            <li>SwiftUI</li>
-            <li>MVVM Architecture</li>
-            <li>CoreData</li>
-            <li>URLSession + Combine</li>
-            <li>Xcode 14+</li>
-            <li>iOS (iPhone & iPad)</li>
-        </ul>
-    </div>
-    
-    <div class="card">
-        <h3>✨ Key Features</h3>
-        <div class="features">
-            <div class="feature">📱 Onboarding with persistent user profile</div>
-            <div class="feature">🍽 Menu with search & filtering</div>
-            <div class="feature">📄 Detail views with AsyncImage</div>
-            <div class="feature">👤 User Profile with encryption</div>
-            <div class="feature">🗄 CoreData persistence</div>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <a href="https://github.com/ongunakaycom/Little-Lemon-Food-Ordering-App">
+                    🍋 Little Lemon
+                </a>
+                <a href="https://ongunakay.com">Portfolio</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="hero">
+            <h1>🍋 Little Lemon</h1>
+            <p>iOS Food Ordering App • Meta iOS Developer Certificate Capstone</p>
         </div>
-    </div>
-    
-    ## 🏗 Architecture
 
-The app follows the **MVVM (Model-View-ViewModel)** architectural pattern, separated into three main components:
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="card">
+                    <h2>About the App</h2>
+                    <p>A SwiftUI-based iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate on Coursera. Demonstrates modern iOS development practices including SwiftUI, CoreData persistence, MVVM architecture, and Combine framework.</p>
+                </div>
+            </div>
+        </section>
 
-### 📦 Models (`Models/`)
-- **`MenuItem`** & **`MenuList`** – Codable structs for JSON decoding from the API
-- **`Dish`** – CoreData entity for persistent menu storage
-- Responsible for data representation and serialization
+        <!-- Tech Stack -->
+        <section class="section" id="tech-stack">
+            <div class="container">
+                <h2>🛠 Tech Stack</h2>
+                <div class="badges">
+                    <span class="badge">Swift 5.7+</span>
+                    <span class="badge">SwiftUI</span>
+                    <span class="badge">MVVM</span>
+                    <span class="badge">CoreData</span>
+                    <span class="badge">Combine</span>
+                    <span class="badge">Xcode 14+</span>
+                    <span class="badge">iOS 15+</span>
+                    <span class="badge">Meta Certificate</span>
+                </div>
+            </div>
+        </section>
 
-### 👁️ Views (`Views/`)
-SwiftUI screens that render the UI:
-- **`Onboarding`** – User registration flow
-- **`Home`** / **`MainScreen`** – Container with Header + Menu
-- **`Menu`** – Search, category toggles (starters/mains/desserts/drinks), dish list from CoreData
-- **`FoodItem`** – List row component with image, title, description, price
-- **`DetailItem`** – Full-screen dish view with AsyncImage, title, description, price
-- **`Hero`** – Restaurant description section ("Little Lemon – Chicago")
-- **`Header`** – Top bar with profile avatar navigation
-- **`UserProfile`** – Personal information edit with encryption (AES.GCM) and toggle settings
+        <!-- Key Features -->
+        <section class="section" id="features">
+            <div class="container">
+                <h2>✨ Key Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="icon">1</div>
+                        <div>
+                            <strong>Onboarding</strong> with persistent user profile
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">2</div>
+                        <div>
+                            <strong>Menu</strong> with search & filtering
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">3</div>
+                        <div>
+                            <strong>Detail Views</strong> with AsyncImage
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">4</div>
+                        <div>
+                            <strong>User Profile</strong> with encryption
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">5</div>
+                        <div>
+                            <strong>CoreData</strong> persistence
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-### 🧠 ViewModels (`ViewModels/`)
-- **`ViewModel`** – Business logic and CoreData operations
-- Handles user input validation (`validateUserInput()`)
-- Manages UserDefaults persistence (first name, last name, email, phone, settings)
-- Email encryption using `CryptoKit` (AES.GCM)
-- Error state management (`errorMessage`, `errorMessageShow`)
+        <!-- Architecture -->
+        <section class="section" id="architecture">
+            <div class="container">
+                <h2>🏗 Architecture</h2>
+                <p>The app follows the <strong>MVVM (Model-View-ViewModel)</strong> architectural pattern, separated into three main components:</p>
 
-### 📊 Data Flow
+                <!-- Models -->
+                <div class="card" style="margin-top: 0;">
+                    <h3>📦 Models (<code>Models/</code>)</h3>
+                    <ul>
+                        <li><strong>MenuItem</strong> & <strong>MenuList</strong> – Codable structs for JSON decoding from the API</li>
+                        <li><strong>Dish</strong> – CoreData entity for persistent menu storage</li>
+                        <li>Responsible for data representation and serialization</li>
+                    </ul>
+                </div>
 
-```mermaid
-flowchart LR
-    JSON["JSON API\n(menu.json)"] -->|URLSession decoding| Models
-    Models -->|CoreData persistence| Persistence
-    Persistence -->|FetchedResults| ViewModels
-    ViewModels -->|SwiftUI data binding| Views
-    Views -->|User interaction| User
-```
+                <!-- Views -->
+                <div class="card">
+                    <h3>👁️ Views (<code>Views/</code>)</h3>
+                    <p>SwiftUI screens that render the UI:</p>
+                    <ul>
+                        <li><strong>Onboarding</strong> – User registration flow</li>
+                        <li><strong>Home</strong> / <strong>MainScreen</strong> – Container with Header + Menu</li>
+                        <li><strong>Menu</strong> – Search, category toggles (starters/mains/desserts/drinks), dish list from CoreData</li>
+                        <li><strong>FoodItem</strong> – List row component with image, title, description, price</li>
+                        <li><strong>DetailItem</strong> – Full-screen dish view with AsyncImage, title, description, price</li>
+                        <li><strong>Hero</strong> – Restaurant description section ("Little Lemon – Chicago")</li>
+                        <li><strong>Header</strong> – Top bar with profile avatar navigation</li>
+                        <li><strong>UserProfile</strong> – Personal information edit with encryption (AES.GCM) and toggle settings</li>
+                    </ul>
+                </div>
 
-### 🔄 Key Architectural Decisions
+                <!-- ViewModels -->
+                <div class="card">
+                    <h3>🧠 ViewModels (<code>ViewModels/</code>)</h3>
+                    <ul>
+                        <li><strong>ViewModel</strong> – Business logic and CoreData operations</li>
+                        <li>Handles user input validation (<code>validateUserInput()</code>)</li>
+                        <li>Manages UserDefaults persistence (first name, last name, email, phone, settings)</li>
+                        <li>Email encryption using <code>CryptoKit</code> (AES.GCM)</li>
+                        <li>Error state management (<code>errorMessage</code>, <code>errorMessageShow</code>)</li>
+                    </ul>
+                </div>
 
-| Decision | Reason |
-|----------|--------|
-| **MVVM** | Separation of concerns, testability, SwiftUI-friendly |
-| **CoreData** | Local persistence for menu data, survives app restarts |
-| **Combine** | Reactive state management, `@Published` properties |
-| **AES.GCM encryption** | Secure email storage in UserDefaults |
-| **URLSession** | Network fetching from GitHub API for menu data |
-| **FetchedObjects** | Reactive SwiftUI wrapper for CoreData fetch results |
+                <!-- Data Flow -->
+                <div class="section" style="margin-top: 2rem;">
+                    <h3>📊 Data Flow</h3>
+                    <div class="mermaid">
+                        flowchart LR
+                            JSON["JSON API\n(menu.json)"] -->|URLSession decoding| Models
+                            Models -->|CoreData persistence| Persistence
+                            Persistence -->|FetchedResults| ViewModels
+                            ViewModels -->|SwiftUI data binding| Views
+                            Views -->|User interaction| User
+                    </div>
+                </div>
 
-### 📱 Navigation Flow
+                <!-- Key Architectural Decisions -->
+                <div class="card" style="margin-top: 1rem;">
+                    <h3>🔄 Key Architectural Decisions</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Decision</th>
+                                <th>Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>MVVM</strong></td>
+                                <td>Separation of concerns, testability, SwiftUI-friendly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CoreData</strong></td>
+                                <td>Local persistence for menu data, survives app restarts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Combine</strong></td>
+                                <td>Reactive state management, <code>@Published</code> properties</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AES.GCM encryption</strong></td>
+                                <td>Secure email storage in UserDefaults</td>
+                            </tr>
+                            <tr>
+                                <td><strong>URLSession</strong></td>
+                                <td>Network fetching from GitHub API for menu data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FetchedObjects</strong></td>
+                                <td>Reactive SwiftUI wrapper for CoreData fetch results</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-```
-Onboarding → (Register) → Home → Menu → DetailItem
-           ↘-----------------↗
-                UserProfile (edit profile, logout)
-```
+                <!-- Navigation Flow -->
+                <div class="section" style="margin-top: 1rem;">
+                    <h3>📱 Navigation Flow</h3>
+                    <div class="nav-flow">
+                        <div class="nav-step">
+                            <div class="number">1</div>
+                            <strong>Onboarding</strong>
+                        </div>
+                        <div class="nav-step">
+                            <div class="number">2</div>
+                            <strong>Home</strong>
+                        </div>
+                        <div class="nav-step">
+                            <div class="number">3</div>
+                            <strong>Menu</strong>
+                        </div>
+                        <div class="nav-step">
+                            <div class="number">4</div>
+                            <strong>DetailItem</strong>
+                        </div>
+                        <div class="nav-step">
+                            <div class="number">5</div>
+                            <strong>UserProfile</strong>
+                        </div>
+                    </div>
+                </div>
 
-### ⚙️ Key Components Diagram
+                <!-- Key Components -->
+                <div class="diagram" style="margin-top: 1rem;">
+                    <h3>⚙️ Key Components</h3>
+                    <div class="mermaid">
+                        flowchart TB
+                            direction TB
+                            subgraph "Presentation Layer"
+                                V[SwiftUI Views]
+                            end
+                            subgraph "Business Logic Layer"
+                                VM[ViewModel]
+                            end
+                            subgraph "Data Layer"
+                                DC[CoreData]
+                                VW[ViewModel Wrapper]
+                            end
+                            subgraph "Networking"
+                                NS[URLSession]
+                            end
+                            
+                            V <--> VM
+                            VM <--> DC
+                            NS -->|Menu JSON| DC
+                            VW -->|FetchResults| V
+                    </div>
+                </div>
 
-```mermaid
-flowchart TB
-    direction TB
-    subgraph "Presentation Layer"
-        V[SwiftUI Views]
-    end
-    subgraph "Business Logic Layer"
-        VM[ViewModel]
-    end
-    subgraph "Data Layer"
-        DC[CoreData]
-        VW[ViewModel Wrapper]
-    end
-    subgraph "Networking"
-        NS[URLSession]
-    end
-    
-    V <--> VM
-    VM <--> DC
-    NS -->|Menu JSON| DC
-    VW -->|FetchResults| V
-```
+                <!-- Technologies Used -->
+                <div style="margin-top: 2rem;">
+                    <h3>🛠 Technologies Used</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px;">
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>SwiftUI</strong><br>Declarative UI framework
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>MVVM</strong><br>Architectural pattern
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>CoreData</strong><br>Local persistence
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>Combine</strong><br>Reactive programming
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>URLSession</strong><br>Networking
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>CryptoKit</strong><br>AES.GCM encryption
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>GitHub Actions</strong><br>CI/CD pipeline
+                        </div>
+                        <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid var(--border);">
+                            <strong>GitHub Pages</strong><br>Static site hosting
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-### 🛠 Technologies Used
-
-- **SwiftUI** – Declarative UI framework
-- **MVVM** – Architectural pattern
-- **CoreData** – Local persistence
-- **Combine** – Reactive programming
-- **URLSession** – Networking
-- **CryptoKit** – AES.GCM encryption
-- **GitHub Actions** – CI/CD pipeline
-- **GitHub Pages** – Static site hosting
-```
-
----
-
-    <div class="footer">
-        Portfolio project for Meta iOS Developer Certificate • Ongun Akay<br>
-        <a href="https://github.com/ongunakaycom">GitHub</a> • 
-        <a href="https://ongunakay.com">Portfolio</a>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>Portfolio project for Meta iOS Developer Certificate • Ongun Akay</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="https://github.com/ongunakaycom" style="color: white; text-decoration: none;">GitHub</a>
+                    <a href="https://ongunakay.com" style="color: white; text-decoration: none;">Portfolio</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
