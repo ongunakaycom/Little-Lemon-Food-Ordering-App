@@ -1,5 +1,20 @@
 # 🍋 Little Lemon – iOS Food Ordering App
 
+![GitHub repo size](https://img.shields.io/github/repo-size/ongunakaycom/Little-Lemon-Food-Ordering-App?color=666666&logo=github&logoColor=white)
+![GitHub stars](https://img.shields.io/github/stars/ongunakaycom/Little-Lemon-Food-Ordering-App?style=social)
+![GitHub forks](https://img.shields.io/github/forks/ongunakaycom/Little-Lemon-Food-Ordering-App?color=666666&logo=github&logoColor=white)
+![GitHub last commit](https://img.shields.io/github/last-commit/ongunakaycom/Little-Lemon-Food-Ordering-App?color=666666&logo=github&logoColor=white)
+![GitHub issues](https://img.shields.io/github/issues/ongunakaycom/Little-Lemon-Food-Ordering-App?color=666666&logo=github&logoColor=white)
+![GitHub license](https://img.shields.io/github/license/ongunakaycom/Little-Lemon-Food-Ordering-App?color=666666&logo=github&logoColor=white)
+
+![Swift](https://img.shields.io/badge/Swift-5.7-orange?logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-5.7-blue?logo=ios&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-14+-red?logo=xcode&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-15%2B-lightgray?logo=apple&logoColor=white)
+![MVVM](https://img.shields.io/badge/MVVM-architecture-success?logo=react&logoColor=white)
+![CoreData](https://img.shields.io/badge/CoreData-persistent-green?logo=database&logoColor=white)
+![Combine](https://img.shields.io/badge/Combine-reactive-purple?logo=swift&logoColor=white)
+
 **Little Lemon** is an elegant SwiftUI iOS application for a fictional Mediterranean restaurant, built as the capstone project for the Meta iOS Developer Professional Certificate program on Coursera. The app demonstrates modern iOS development practices including **SwiftUI**, **CoreData** for persistent storage, **MVVM** architecture, and **Combine** for reactive state management.
 
 ---
