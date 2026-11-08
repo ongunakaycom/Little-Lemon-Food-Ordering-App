@@ -1,5 +1,16 @@
 # 🍋 Little Lemon – iOS Food Ordering App
 
+![Meta](https://img.shields.io/badge/Meta-iOS%20Developer%20Certificate-1a73e8?logo=meta&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-5.7-orange?logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-5.7-blue?logo=ios&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-14+-red?logo=xcode&logoColor=white)
+![CoreData](https://img.shields.io/badge/CoreData-persistent-green?logo=database&logoColor=white)
+![Combine](https://img.shields.io/badge/Combine-reactive-purple?logo=swift&logoColor=white)
+![MVVM](https://img.shields.io/badge/MVVM-architecture-success?logo=react&logoColor=white)
+![Coursera](https://img.shields.io/badge/Coursera-Professional%20Certificate-blue?logo=coursera&logoColor=white)
+
+# 🍋 Little Lemon – iOS Food Ordering App
+
 **Little Lemon** is an elegant SwiftUI iOS application for a fictional Mediterranean restaurant, built as the capstone project for the **Meta iOS Developer Professional Certificate** on Coursera. The app demonstrates modern iOS development practices including **SwiftUI**, **CoreData** for persistent storage, **MVVM** architecture, and **Combine** for reactive state management.
 
 This project is part of the **Meta iOS Developer Professional Certificate** program – a 12-course series designed to launch careers as iOS developers. No degree or prior experience is required.
