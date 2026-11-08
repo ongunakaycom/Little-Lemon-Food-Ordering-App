@@ -107,15 +107,102 @@
         </div>
     </div>
     
-    <div class="gallery">
-        <img src="github-assets/logo.png" alt="App Logo" width="150">
-        <img src="github-assets/hero-image.png" alt="Hero Section" width="250">
-        <img src="github-assets/greek-salad.png" alt="Greek Salad Dish" width="180">
-        <img src="github-assets/bruschetta.png" alt="Bruschetta Dish" width="180">
-        <img src="github-assets/profile.png" alt="User Profile" width="150">
-        <img src="github-assets/restaurant.png" alt="Restaurant" width="180">
-    </div>
+    ## 🏗 Architecture
+
+The app follows the **MVVM (Model-View-ViewModel)** architectural pattern, separated into three main components:
+
+### 📦 Models (`Models/`)
+- **`MenuItem`** & **`MenuList`** – Codable structs for JSON decoding from the API
+- **`Dish`** – CoreData entity for persistent menu storage
+- Responsible for data representation and serialization
+
+### 👁️ Views (`Views/`)
+SwiftUI screens that render the UI:
+- **`Onboarding`** – User registration flow
+- **`Home`** / **`MainScreen`** – Container with Header + Menu
+- **`Menu`** – Search, category toggles (starters/mains/desserts/drinks), dish list from CoreData
+- **`FoodItem`** – List row component with image, title, description, price
+- **`DetailItem`** – Full-screen dish view with AsyncImage, title, description, price
+- **`Hero`** – Restaurant description section ("Little Lemon – Chicago")
+- **`Header`** – Top bar with profile avatar navigation
+- **`UserProfile`** – Personal information edit with encryption (AES.GCM) and toggle settings
+
+### 🧠 ViewModels (`ViewModels/`)
+- **`ViewModel`** – Business logic and CoreData operations
+- Handles user input validation (`validateUserInput()`)
+- Manages UserDefaults persistence (first name, last name, email, phone, settings)
+- Email encryption using `CryptoKit` (AES.GCM)
+- Error state management (`errorMessage`, `errorMessageShow`)
+
+### 📊 Data Flow
+
+```mermaid
+flowchart LR
+    JSON["JSON API\n(menu.json)"] -->|URLSession decoding| Models
+    Models -->|CoreData persistence| Persistence
+    Persistence -->|FetchedResults| ViewModels
+    ViewModels -->|SwiftUI data binding| Views
+    Views -->|User interaction| User
+```
+
+### 🔄 Key Architectural Decisions
+
+| Decision | Reason |
+|----------|--------|
+| **MVVM** | Separation of concerns, testability, SwiftUI-friendly |
+| **CoreData** | Local persistence for menu data, survives app restarts |
+| **Combine** | Reactive state management, `@Published` properties |
+| **AES.GCM encryption** | Secure email storage in UserDefaults |
+| **URLSession** | Network fetching from GitHub API for menu data |
+| **FetchedObjects** | Reactive SwiftUI wrapper for CoreData fetch results |
+
+### 📱 Navigation Flow
+
+```
+Onboarding → (Register) → Home → Menu → DetailItem
+           ↘-----------------↗
+                UserProfile (edit profile, logout)
+```
+
+### ⚙️ Key Components Diagram
+
+```mermaid
+flowchart TB
+    direction TB
+    subgraph "Presentation Layer"
+        V[SwiftUI Views]
+    end
+    subgraph "Business Logic Layer"
+        VM[ViewModel]
+    end
+    subgraph "Data Layer"
+        DC[CoreData]
+        VW[ViewModel Wrapper]
+    end
+    subgraph "Networking"
+        NS[URLSession]
+    end
     
+    V <--> VM
+    VM <--> DC
+    NS -->|Menu JSON| DC
+    VW -->|FetchResults| V
+```
+
+### 🛠 Technologies Used
+
+- **SwiftUI** – Declarative UI framework
+- **MVVM** – Architectural pattern
+- **CoreData** – Local persistence
+- **Combine** – Reactive programming
+- **URLSession** – Networking
+- **CryptoKit** – AES.GCM encryption
+- **GitHub Actions** – CI/CD pipeline
+- **GitHub Pages** – Static site hosting
+```
+
+---
+
     <div class="footer">
         Portfolio project for Meta iOS Developer Certificate • Ongun Akay<br>
         <a href="https://github.com/ongunakaycom">GitHub</a> • 
